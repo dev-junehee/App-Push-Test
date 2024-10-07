@@ -13,6 +13,10 @@
 		C4D927CA2CB36C8500AAD7E1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C4D927C92CB36C8500AAD7E1 /* Base */; };
 		C4D927CC2CB36C8600AAD7E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D927CB2CB36C8600AAD7E1 /* Assets.xcassets */; };
 		C4D927CF2CB36C8600AAD7E1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C4D927CE2CB36C8600AAD7E1 /* Base */; };
+		C4D927D92CB3712100AAD7E1 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = C4D927D82CB3712100AAD7E1 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		C4D927DB2CB3712100AAD7E1 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = C4D927DA2CB3712100AAD7E1 /* FirebaseCrashlytics */; };
+		C4D927DD2CB3712100AAD7E1 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = C4D927DC2CB3712100AAD7E1 /* FirebaseMessaging */; };
+		C4D927DF2CB3724000AAD7E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4D927DE2CB3724000AAD7E1 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,8 @@
 		C4D927CB2CB36C8600AAD7E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4D927CE2CB36C8600AAD7E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4D927D02CB36C8600AAD7E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4D927D62CB36CE700AAD7E1 /* App-Push-Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "App-Push-Test.entitlements"; sourceTree = "<group>"; };
+		C4D927DE2CB3724000AAD7E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D927DD2CB3712100AAD7E1 /* FirebaseMessaging in Frameworks */,
+				C4D927D92CB3712100AAD7E1 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				C4D927DB2CB3712100AAD7E1 /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +65,8 @@
 		C4D927C12CB36C8500AAD7E1 /* App-Push-Test */ = {
 			isa = PBXGroup;
 			children = (
+				C4D927DE2CB3724000AAD7E1 /* GoogleService-Info.plist */,
+				C4D927D62CB36CE700AAD7E1 /* App-Push-Test.entitlements */,
 				C4D927C22CB36C8500AAD7E1 /* AppDelegate.swift */,
 				C4D927C42CB36C8500AAD7E1 /* SceneDelegate.swift */,
 				C4D927C62CB36C8500AAD7E1 /* ViewController.swift */,
@@ -83,6 +94,11 @@
 			dependencies = (
 			);
 			name = "App-Push-Test";
+			packageProductDependencies = (
+				C4D927D82CB3712100AAD7E1 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				C4D927DA2CB3712100AAD7E1 /* FirebaseCrashlytics */,
+				C4D927DC2CB3712100AAD7E1 /* FirebaseMessaging */,
+			);
 			productName = "App-Push-Test";
 			productReference = C4D927BF2CB36C8500AAD7E1 /* App-Push-Test.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +127,9 @@
 				Base,
 			);
 			mainGroup = C4D927B62CB36C8500AAD7E1;
+			packageReferences = (
+				C4D927D72CB3712100AAD7E1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = C4D927C02CB36C8500AAD7E1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4D927CC2CB36C8600AAD7E1 /* Assets.xcassets in Resources */,
+				C4D927DF2CB3724000AAD7E1 /* GoogleService-Info.plist in Resources */,
 				C4D927CF2CB36C8600AAD7E1 /* Base in Resources */,
 				C4D927CA2CB36C8500AAD7E1 /* Base in Resources */,
 			);
@@ -290,6 +310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "App-Push-Test/App-Push-Test.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 95Z2W8U6PK;
@@ -298,8 +319,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,9 +328,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.junehee.App-Push-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -318,6 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "App-Push-Test/App-Push-Test.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 95Z2W8U6PK;
@@ -326,8 +352,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +361,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.junehee.App-Push-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -363,6 +393,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C4D927D72CB3712100AAD7E1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C4D927D82CB3712100AAD7E1 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4D927D72CB3712100AAD7E1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		C4D927DA2CB3712100AAD7E1 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4D927D72CB3712100AAD7E1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		C4D927DC2CB3712100AAD7E1 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4D927D72CB3712100AAD7E1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C4D927B72CB36C8500AAD7E1 /* Project object */;
 }
