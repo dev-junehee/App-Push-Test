@@ -6,6 +6,7 @@
 //
 
 import XCTest
+// import Testing
 @testable import App_Push_Test
 
 final class UpgradeValidationTest: XCTestCase {
@@ -22,9 +23,17 @@ final class UpgradeValidationTest: XCTestCase {
     override func tearDownWithError() throws {
         sut = nil
     }
+    
+    // @Test func Validator_ValidID_ReturnTrue() {
+    //     
+    // }
 
     func testValidator_ValidID_ReturnTrue() throws {
-        let valid = sut.isValidEmail(email: validUser.email)
+        // given
+        let email = validUser.email
+        // when
+        let valid = sut.isValidEmail(email: email)
+        // then
         XCTAssertTrue(valid)
     }
 

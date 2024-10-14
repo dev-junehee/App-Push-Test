@@ -37,7 +37,11 @@ final class LoginValidationTest: XCTestCase {
      즉 실패했다 == 실패 케이스를 성공했다 == 성공했다
     */
     func testViewController_ValidID_ReturnTrue() throws {
-        sut.idTextField.text = "junehee@test.com"
+        // given
+        let value = "junehee@test.com"
+        // when
+        sut.idTextField.text = value
+        // then
         XCTAssertTrue(sut.isValidID(), "@ 없거나 6글자 미만입니다")
     }
     

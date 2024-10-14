@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NetworkManager.shared.fetchLotto { lotto in
+            print(lotto)
+        }
         loginButton.accessibilityIdentifier = "loginButton"
     }
     

@@ -21,6 +21,14 @@ final class App_Push_Test_SampleTests: XCTestCase {
         print("TearDown")
     }
     
+    /**
+     TDD: 테스트 주도 개발
+     BDD: 행동 주도 개발
+     
+     Given: 제공해주고 있는 환경
+     When: 메서드
+     Then: 기대 결과
+     */
     func testExample() throws {
         print("Test Example")
         let a = 2
