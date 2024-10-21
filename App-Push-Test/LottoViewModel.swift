@@ -23,7 +23,9 @@ class LottoViewModel {
     }
     
     func transform() {
-        networkProvider.fetchLotto(completionHandler: <#T##(Lotto) -> Void#>)
+        networkProvider.fetchLotto { lotto in
+            
+        }
     }
     
 }
